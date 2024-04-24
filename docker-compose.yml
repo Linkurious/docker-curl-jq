@@ -1,0 +1,8 @@
+---
+version: '3.9'
+
+services:
+  docker-agent-jnlp:
+    image: ${REPOSITORY:-}linkurious/docker-curl-jq:${DOCKER_CURL_JQ_VERSION:-0.0.2}
+    build:
+      context: .
