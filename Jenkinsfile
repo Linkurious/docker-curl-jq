@@ -3,7 +3,8 @@
 dockerJob {
   // General
   projectName = "linkurious/docker-curl-jq"
-  dockerfileName = "Dockerfile"
+  podTemplateNames = ['jnlp-agent']
+  buildkitBuilder = true
 
   //buildOnlyAfterUpload = true
   runDependencyScan = true
@@ -12,4 +13,3 @@ dockerJob {
   runBookeeping = true
   githubRelease = true
 }
-
