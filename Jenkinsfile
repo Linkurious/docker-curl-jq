@@ -6,7 +6,10 @@ dockerJob {
   dockerfileName = "Dockerfile"
 
   //buildOnlyAfterUpload = true
-  dockerBuildkit = 1
+  runDependencyScan = true
 
+  createGitTag = true
+  runBookeeping = true
+  githubRelease = true
 }
 
