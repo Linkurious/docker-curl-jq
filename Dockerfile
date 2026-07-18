@@ -1,4 +1,4 @@
-FROM ubuntu:22.04
+FROM ubuntu:26.04
 
 # renovate: datasource=repology depName=ubuntu_22_04/curl versioning=loose
 ARG CURL_VERSION=7.81.0-1ubuntu1.16
