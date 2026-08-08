@@ -1,7 +1,7 @@
 FROM ubuntu:22.04
 
 # renovate: datasource=repology depName=ubuntu_22_04/curl versioning=loose
-ARG CURL_VERSION=7.81.0-1ubuntu1.16
+ARG CURL_VERSION=7.81.0-1ubuntu1.25
 # renovate: datasource=repology depName=ubuntu_22_04/bind9 versioning=loose
 ARG DNSUTILS_VERSION=1:9.18.18-0ubuntu0.22.04.2
 # renovate: datasource=repology depName=ubuntu_22_04/jq versioning=loose
