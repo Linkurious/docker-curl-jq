@@ -5,7 +5,7 @@ ARG CURL_VERSION=7.81.0-1ubuntu1.16
 # renovate: datasource=repology depName=ubuntu_22_04/bind9 versioning=loose
 ARG DNSUTILS_VERSION=1:9.18.18-0ubuntu0.22.04.2
 # renovate: datasource=repology depName=ubuntu_22_04/jq versioning=loose
-ARG JQ_VERSION=1.6-2.1ubuntu3
+ARG JQ_VERSION=1.6-2.1ubuntu3.2
 # renovate: datasource=repology depName=ubuntu_22_04/ca-certificates versioning=loose
 ARG CA_CERTIFICATES_VERSION=20230311ubuntu0.22.04.1
 
