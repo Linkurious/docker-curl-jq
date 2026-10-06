@@ -1,19 +1,19 @@
-FROM ubuntu:22.04
+FROM debian:trixie-slim
 
-# renovate: datasource=repology depName=ubuntu_22_04/curl versioning=loose
-ARG CURL_VERSION=7.81.0-1ubuntu1.16
-# renovate: datasource=repology depName=ubuntu_22_04/bind9 versioning=loose
-ARG DNSUTILS_VERSION=1:9.18.18-0ubuntu0.22.04.2
-# renovate: datasource=repology depName=ubuntu_22_04/jq versioning=loose
-ARG JQ_VERSION=1.6-2.1ubuntu3
-# renovate: datasource=repology depName=ubuntu_22_04/ca-certificates versioning=loose
-ARG CA_CERTIFICATES_VERSION=20230311ubuntu0.22.04.1
+# renovate: datasource=custom.debian-trixie depName=curl versioning=loose
+ARG CURL_VERSION=8.14.1-2+deb13u5
+# renovate: datasource=custom.debian-trixie depName=bind9-dnsutils versioning=loose
+ARG DNSUTILS_VERSION=1:9.20.29-1~deb13u1
+# renovate: datasource=custom.debian-trixie depName=jq versioning=loose
+ARG JQ_VERSION=1.7.1-6+deb13u4
+# renovate: datasource=custom.debian-trixie depName=ca-certificates versioning=loose
+ARG CA_CERTIFICATES_VERSION=20250419
 
 RUN apt-get update -y && \
     apt-get install -y --no-install-recommends\
     ca-certificates=$CA_CERTIFICATES_VERSION \
     curl=$CURL_VERSION \
-    dnsutils=$DNSUTILS_VERSION \
+    bind9-dnsutils=$DNSUTILS_VERSION \
     jq=$JQ_VERSION \
     && apt-get autoremove -y \
     && apt-get clean -y \
