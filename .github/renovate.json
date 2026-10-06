@@ -2,5 +2,17 @@
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
   "extends": [
     "local>Linkurious/renovate-config"
+  ],
+  "packageRules": [
+    {
+      "description": "Ubuntu packages pinned in the Dockerfile come from the Ubuntu archive (not Debian)",
+      "matchDatasources": [
+        "deb"
+      ],
+      "registryUrls": [
+        "https://archive.ubuntu.com/ubuntu?suite=resolute-updates&components=main&binaryArch=amd64",
+        "https://archive.ubuntu.com/ubuntu?suite=resolute-security&components=main&binaryArch=amd64"
+      ]
+    }
   ]
 }
