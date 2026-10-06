@@ -1,13 +1,13 @@
-FROM ubuntu:26.04
+FROM debian:trixie-slim
 
-# renovate: datasource=deb depName=curl versioning=deb
-ARG CURL_VERSION=8.18.0-1ubuntu2.7
-# renovate: datasource=deb depName=bind9-dnsutils versioning=deb
-ARG DNSUTILS_VERSION=1:9.20.24-1ubuntu0.3
-# renovate: datasource=deb depName=jq versioning=deb
-ARG JQ_VERSION=1.8.1-4ubuntu2
-# renovate: datasource=deb depName=ca-certificates versioning=deb
-ARG CA_CERTIFICATES_VERSION=20260601~26.04.1
+# renovate: datasource=custom.debian-trixie depName=curl versioning=loose
+ARG CURL_VERSION=8.14.1-2+deb13u5
+# renovate: datasource=custom.debian-trixie depName=bind9-dnsutils versioning=loose
+ARG DNSUTILS_VERSION=1:9.20.29-1~deb13u1
+# renovate: datasource=custom.debian-trixie depName=jq versioning=loose
+ARG JQ_VERSION=1.7.1-6+deb13u4
+# renovate: datasource=custom.debian-trixie depName=ca-certificates versioning=loose
+ARG CA_CERTIFICATES_VERSION=20250419
 
 RUN apt-get update -y && \
     apt-get install -y --no-install-recommends\
