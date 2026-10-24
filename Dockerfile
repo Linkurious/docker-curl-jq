@@ -3,7 +3,7 @@ FROM debian:trixie-slim
 # renovate: datasource=custom.debian-trixie depName=curl versioning=loose
 ARG CURL_VERSION=8.14.1-2+deb13u5
 # renovate: datasource=custom.debian-trixie depName=bind9-dnsutils versioning=loose
-ARG DNSUTILS_VERSION=1:9.20.29-1~deb13u1
+ARG DNSUTILS_VERSION=1:9.20.30-1~deb13u1
 # renovate: datasource=custom.debian-trixie depName=jq versioning=loose
 ARG JQ_VERSION=1.7.1-6+deb13u4
 # renovate: datasource=custom.debian-trixie depName=ca-certificates versioning=loose
